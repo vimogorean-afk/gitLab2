@@ -1,4 +1,4 @@
-class TodoApp {
+class toDoList {
     constructor(){
         
         this.form = document.querySelector('form'); 
