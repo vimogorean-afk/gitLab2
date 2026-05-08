@@ -76,5 +76,15 @@ class toDoList {
             this.saveTodo(e);
         }
     }
+    deleteTodo(e){
+        const parent = e.target.parentNode;
+        const todoId = Number(parent.getAttribute('id'));
+
+        parent.remove();
+
+        this.todosArr = this.todosArr.filter(todo => todo.id != todoId);
+        this.save();
+    }
+    
 
     }
