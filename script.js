@@ -43,4 +43,23 @@ class toDoList {
 
         this.todoContent.appendChild(todoDiv);
     }
+    save(){
+        localStorage.setItem('todosDB', JSON.stringify(this.todosArr));
+    }
+
+    onSubmit(e){
+        e.preventDefault();  
+
+        const text = this.todoInput.value;
+
+        const id = Date.now();
+
+        this.createTodoElements(id, text);
+
+        this.todosArr.push({
+            id: id,
+            todoText: text
+        });
+
+    }
 }
