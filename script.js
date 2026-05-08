@@ -134,3 +134,4 @@ class toDoList {
     
 
     }
+    new TodoApp();
