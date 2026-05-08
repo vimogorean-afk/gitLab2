@@ -60,6 +60,21 @@ class toDoList {
             id: id,
             todoText: text
         });
+   this.save();
+        this.form.reset();  
+    }
+    onClick(e){
+        const target = e.target;
+
+        if(target.id === 'delete'){
+            this.deleteTodo(e);
+        }
+        else if(target.id === 'edit'){
+            this.editTodo(e);
+        }
+        else if(target.id === 'save'){
+            this.saveTodo(e);
+        }
+    }
 
     }
-}
